@@ -1,0 +1,155 @@
+body{
+margin: 0;
+padding: 0;
+font-family: 'Courier New', Courier, monospace;
+font-size: 150%;
+line-height: 1.5;
+background-color: #5c5c5c;
+}
+/* Header asnd navigation*/
+.container{
+    width: 80%;
+    margin: 0px auto;
+    overflow: hidden;
+}
+header{
+    background: #323237;
+    color:white;
+    padding-top: 30px;
+    min-height: 50px;
+    border-bottom: orange 3px solid;
+}
+header a{
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+header a:hover{
+    color: orange;
+    font-weight: bold;
+}
+ ul{
+    margin: 0;
+    padding: 0;
+
+}
+ header li{
+    float: left;
+    display: inline;
+    padding: 0px 20px 0px 20px;
+    text-align: center;
+}
+nav{
+    float: right;
+}
+#branding{
+    float:left;
+    margin-top: -10px;
+}
+#branding h2{
+    margin: 0px 0px 0px -25px;
+    float:right;
+}
+#branding img{
+    float:left;
+    border-radius: 50%;
+    width: 20%;
+}
+header .highlight{
+    color: orange;
+    font-weight: bold;
+}
+
+/* image slider*/
+
+#slider{
+display: inline-block;
+margin: 0px auto;
+
+vertical-align: top;
+
+}
+#slider .mySlides{
+    display: none;
+    width: 100%;
+    border: 3px solid orange;
+    border-top: none;
+}
+.slide_right{
+    margin-left: 30%;
+}
+.slide_left{
+    margin-left: 30%;
+}
+/* Aside updates*/
+aside{
+    width:300px;
+    float: left;
+    color: white;
+    margin: 20px;
+    border-radius: 10px;
+    padding: 0px;
+}
+.updates{
+    width:300px;
+    background: black;
+    opacity: .75;
+    font-size: 60%;
+    font-family: 'Times New Roman', Times, serif;
+    position: relative;
+    bottom: 140px;
+}
+
+aside:hover{
+    width: 450px;
+    zoom: 1.5;
+}
+/* footer */
+footer{
+    background: #323237;
+    color:white;
+    padding-top: 30px;
+    padding-bottom: 2%;
+    margin-top: 10%;
+    min-height: 50px;
+    border-top: orange 3px solid;
+    text-align: center;
+}
+
+footer .social{
+    margin:0 5% 0 5%;
+    display: inline-block;
+    color: white;
+
+}
+footer ul{
+    list-style-type: none;
+}
+
+
+
+/* Media queries*/
+@media(max-width: 370px){
+    header nav, header nav li{
+        float:none;
+        text-align: center;
+        width: 100%;
+        display: block;
+    }
+    header #branding img{
+        float: none;
+        width: 20%;
+    }
+    #slider{
+        margin: 0px auto;
+    }
+    
+}
+
+@media(max-width: 450px){
+    aside{
+        width: 90%;
+    }
+
+}
+

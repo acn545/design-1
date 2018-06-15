@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>Title Here</title>
+        <link rel="stylesheet" type="text/css" href="layout_css.css">
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script>
+            $(document).ready(function(){
+                showDivs(1);
+            });
+
+            var slideIndex = 1;
+            
+            function plusDivs(n) {
+                showDivs(slideIndex += n);
+            }
+            
+            function showDivs(n) {
+                var i;
+                var x = document.getElementsByClassName("mySlides");
+                if (n > x.length) {slideIndex = 1}
+                if (n < 1) {slideIndex = x.length} ;
+                for (i = 0; i < x.length; i++) {
+                    x[i].style.display = "none";
+                }
+                x[slideIndex-1].style.display = "block";
+            }
+        </script>
+    </head>
+<body>
+
+    <div id="wrapper">
+       <header>
+           <div class="container">
+               <div id="branding">
+                    <img src="master.jpg" alt="icon image">
+                    <h2><span class="highlight">THE GAME</span></h2>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="">Home</a></li>
+                        <li><a href="">Forums</a></li>
+                        <li><a href="">About</a></li>
+                        <li><a href="">Contact</a></li>
+                        <li><a href="">Login</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <aside>
+            <img src="page1.jpg" alt="an image" width="300px;">
+            <div class="updates">
+                <h2> Update #1</h2>
+                 <p>We are starting early Development on a 2d side scroller SiFi loot adventure Game, Stay tuned HERE for more updates!</p>
+            </div>
+        </aside>
+        <section>
+            <div id="slider">
+                <img class="mySlides" src="roboc.jpg" alt="robot chief">
+                <img class="mySlides" src="robodog.jpg" alt="robot chief">
+                <img class="mySlides" src="salvage.jpg" alt="robot chief">
+                <img class="mySlides" src="armor.jpg" alt="robot chief">
+                <button class="slide_left" onclick="plusDivs(-1)">&#10094;</button>
+                <button class="slide_right" onclick="plusDivs(+1)">&#10095;</button>
+            </div>
+        </section>
+
+<footer>
+    <div class="social">
+        <ul>
+            <li>facebook</li>
+            <li>twitter</li>
+            <li>instagram</li>
+            <li>Linkedin</li>
+        </ul>
+    </div>
+    <div class="social">
+            <ul>
+                <li>About</li>
+                <li>Press</li>
+                <li>Privacy Policy</li>
+                <li>Contact Us</li>
+            </ul>
+        </div>
+</footer>
+</body>
+</html>
